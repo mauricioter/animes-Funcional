@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, TextInput, TouchableOpacity, View, FlatList, Image, Text } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Animes from "../../animes";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function Home() {
     // fazer uma funcao que vai fazer a busca dp texto do input 
@@ -19,7 +20,7 @@ export default function Home() {
         setFilterAnime(filtrar)
     }
     return (
-        <View >
+        <ScrollView style={{ backgroundColor: "#084D6E" }}>
             <Text style={{ fontSize: 26, fontWeight: "bold", paddingHorizontal: 20, paddingTop: 15, color: "#000" }}>Anime Family</Text>
             <View style={{ backgroundColor: "#848482", borderRadius: 16, marginHorizontal: 20, marginTop: 15, paddingHorizontal: 20, flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 15 }} >
                 <TextInput
@@ -58,7 +59,7 @@ export default function Home() {
                     }
                 />
             </View >
-        </View>
+        </ScrollView>
     )
 }
 
